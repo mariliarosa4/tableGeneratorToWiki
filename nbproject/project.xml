@@ -5,8 +5,7 @@
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
             <name>tableWikiArtefatosGenerator</name>
             <source-roots>
-                <root id="src.dir"/>
-                <root id=".settings.dir"/>
+                <root id="src.all.dir" name="Pacotes de Códigos-fonte"/>
             </source-roots>
             <test-roots/>
         </data>
