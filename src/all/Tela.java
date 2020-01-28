@@ -222,7 +222,8 @@ public class Tela extends JFrame {
     private void gerarCodigoTabela() {
         String tabelaArtefatos = tablemakerArtefatos.gerarCodigo(modelArtefatos, arquivosArtefatos);
         String tabelaDocsApoio = tablemakerDocsApoio.gerarCodigo(modelDocsApoio, arquivosDocsApoio);
-        String codigoFinal = "{|" + tabelaArtefatos + tabelaDocsApoio + "|}";
+        String codigoFinal = "{|" + tabelaArtefatos + tabelaDocsApoio + "|}" + LINE_BREAK + "Atualizado em: " + txtDtAtualizacao.getText();
+
         System.out.println(codigoFinal);
         mostrarResultado(codigoFinal);
 
