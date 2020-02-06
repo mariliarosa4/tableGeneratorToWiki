@@ -38,12 +38,13 @@ public class Tablemaker {
 
         ArrayList<Arquivo> listaArtefatos = new ArrayList<Arquivo>();
         for (String nomeFicheiro : listaFicheiros) {
-            String nomeLabelArquivo = nomeFicheiro.substring(0, nomeFicheiro.length() - 5);
-            String[] arrayNomeArquivo = nomeLabelArquivo.split("]");
+            String[] nomeLabelArquivo = nomeFicheiro.split("\\.");
+            
+            String[] arrayNomeArquivo = nomeLabelArquivo[0].split("]");
             if (arrayNomeArquivo.length > 1) {
-                nomeLabelArquivo = PREFIXO_LABEL_NOME_ARQUIVO + arrayNomeArquivo[1].trim();
+                nomeLabelArquivo[0] = PREFIXO_LABEL_NOME_ARQUIVO + arrayNomeArquivo[1].trim();
             }
-            listaArtefatos.add(new Arquivo(nomeLabelArquivo, nomeFicheiro, null));
+            listaArtefatos.add(new Arquivo(nomeLabelArquivo[0], nomeFicheiro, null));
 
         }
         return listaArtefatos;
